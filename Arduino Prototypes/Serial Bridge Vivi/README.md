@@ -1,6 +1,6 @@
-# !! deprecated
+# !! deprecated ! blabla
 
-This sample remains to demonstrate simple bidirectional communication, but consider  instead the `json-serial-bridge` sample. It uses a more robust way of piping data back and forth.
+This sample remains to demonstrate simple bidirectional communication, but consider instead the `json-serial-bridge` sample. It uses a more robust way of piping data back and forth.
 
 # ws-serial-bridge
 
@@ -10,9 +10,8 @@ This demonstrates bidirectional communication between an Arduino sketch and Java
 
 The demo consists of three bits: an Arduino sketch, a Node.js app, and a web app.
 
-* The Arduino sketch sends/receives via serial over USB
-* A Node.js app connects to the computer's serial port. It's a webserver with websockets enabled. When serial data is received from the Arduino, it broadcasts it to all clients connected via websockets. When data is received on the websocket, it sends it to the Arduino. You can open the connection to your Node.js server from any number of web browsers, including mobile devices!
-
+- The Arduino sketch sends/receives via serial over USB
+- A Node.js app connects to the computer's serial port. It's a webserver with websockets enabled. When serial data is received from the Arduino, it broadcasts it to all clients connected via websockets. When data is received on the websocket, it sends it to the Arduino. You can open the connection to your Node.js server from any number of web browsers, including mobile devices!
 
 # Setup and running
 
@@ -31,10 +30,10 @@ Hack away! Try making a simple command system so that a particular function runs
 
 The Arduino sketch sends and receives commands in a simple string format:
 
-  <Text,Int,Float>
+<Text,Int,Float>
 
 Eg:
-  <Hello,1,10.5>
+<Hello,1,10.5>
 
 Commas , are used to separate each of the three parts, and the whole thing is enclosed in angled brackets < >.
 
@@ -43,10 +42,13 @@ This simple format means you can easily test using Arduino's serial monitor, or 
 # Read more
 
 More on:
-* [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+
+- [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
 
 Bundles:
-* [reconnecting-websocket](https://github.com/pladaria/reconnecting-websocket) wrapper (v3.2.2)
+
+- [reconnecting-websocket](https://github.com/pladaria/reconnecting-websocket) wrapper (v3.2.2)
 
 Credits:
-* Arduino serial I/O: http://forum.arduino.cc/index.php?topic=396450
+
+- Arduino serial I/O: http://forum.arduino.cc/index.php?topic=396450
