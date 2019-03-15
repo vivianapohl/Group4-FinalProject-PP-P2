@@ -20,14 +20,9 @@ function onData(e) {
   var accelGrav = e.accelGrav;
   var rot = e.rot;
   
- // console.log("hello its Clint's code");
-  if (!frozen) {
-    showData(e);
-    colorTheBackground(e);
-    going(e);
-  }
+  console.log(rot.alpha);
+  if (!frozen) showData(e);
 }
-
 
 function initWebsocket() {
   const url = 'ws://' + location.host + '/ws';
@@ -45,28 +40,6 @@ function initWebsocket() {
     onData(o);
   };
 }
-
-function colorTheBackground(event){
-  if (event.rot.alpha > 60 && event.rot.alpha < 80) {
-    document.body.style.backgroundColor = "red";
-  } else if (event.rot.alpha > 280 && event.rot.alpha < 300)  {
-    document.body.style.backgroundColor = "blue";
-  } else {
-  document.body.style.backgroundColor = "green";
-  }
-};
-
-function going(event) {
-  if (event.rot.alpha > 60 && event.rot.alpha < 80) {
-    console.log("going left")  
-  } else if (event.rot.alpha > 280 && event.rot.alpha < 300) {
-    console.log("going right")
-  } else {
-  console.log("going straight")
-  }
-};
-
-
 
 function showData(m) {
   let html = 'accel';
