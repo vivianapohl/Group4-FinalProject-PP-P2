@@ -21,6 +21,7 @@ enum
   MsgPosition,    // 4
 };
 
+//Source for this part:  https://www.instructables.com/id/Control-LED-Using-Serial-Monitor/
 void setup()
 
 {
@@ -63,7 +64,7 @@ void loop()
     }
   }
 }
-
+//End of the Source stated above
 // ---- Serial communication
 void report(int code, const char *message)
 {
