@@ -1,4 +1,6 @@
-# !! deprecated ! blabla
+
+
+# !! deprecated ! 
 
 This sample remains to demonstrate simple bidirectional communication, but consider instead the `json-serial-bridge` sample. It uses a more robust way of piping data back and forth.
 
@@ -52,3 +54,4 @@ Bundles:
 Credits:
 
 - Arduino serial I/O: http://forum.arduino.cc/index.php?topic=396450
+
