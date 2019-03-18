@@ -46,7 +46,7 @@ function initWebsocket() {
   };
 }
 
-//Function for colors added by group
+//Function for colors ALPHA added by group
 function colorTheBackground(event){
   if (event.rot.alpha > 60 && event.rot.alpha < 80) {
     document.body.style.backgroundColor = "red";
@@ -59,7 +59,7 @@ function colorTheBackground(event){
   }
 };
 
-//Function for rotation added by group
+//Function for console.log:ing rotation added by group
 function going(event) {
   if (event.rot.alpha > 60 && event.rot.alpha < 80) {
     console.log("going left")  
@@ -72,7 +72,31 @@ function going(event) {
   }
 };
 
+//Function for colors BETA added by group
+/*function colorTheBackground(event){
+  if (event.rot.beta > 40 && event.rot.beta < 100) {
+    document.body.style.backgroundColor = "pink";
+  } else if (event.rot.beta < -155 && event.rot.beta > -180) {
+    document.body.style.backgroundColor = "limegreen";
+  } else if (event.rot.beta > 155 && event.rot.beta < 180) {
+    document.body.style.backgroundColor = "purple";
+  } else {
+    document.body.style.backgroundColor = "turquoise";
+  }
+};
 
+//Function for console.log:ing rotation added by group
+function going(event) {
+  if (event.rot.beta > 40 && event.rot.beta < 100) {
+    console.log("going pink")  
+  } else if (event.rot.beta < -155 && event.rot.beta > -180) {
+    console.log("going green")
+  } else if (event.rot.beta > 155 && event.rot.beta < 180) {
+    console.log("going purple")
+  } else {
+  console.log("going straight")
+  }
+};*/
 
 function showData(m) {
   let html = 'accel';
