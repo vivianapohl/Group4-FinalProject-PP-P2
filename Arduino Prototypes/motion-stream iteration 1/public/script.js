@@ -46,6 +46,7 @@ function initWebsocket() {
   };
 }
 
+//Function for colors added by group
 function colorTheBackground(event){
   if (event.rot.alpha > 60 && event.rot.alpha < 80) {
     document.body.style.backgroundColor = "red";
@@ -56,6 +57,7 @@ function colorTheBackground(event){
   }
 };
 
+//Function for rotation added by group
 function going(event) {
   if (event.rot.alpha > 60 && event.rot.alpha < 80) {
     console.log("going left")  
