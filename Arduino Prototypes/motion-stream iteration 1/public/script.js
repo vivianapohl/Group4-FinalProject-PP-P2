@@ -50,10 +50,12 @@ function initWebsocket() {
 function colorTheBackground(event){
   if (event.rot.alpha > 60 && event.rot.alpha < 80) {
     document.body.style.backgroundColor = "red";
-  } else if (event.rot.alpha > 280 && event.rot.alpha < 300)  {
+  } else if (event.rot.alpha > 280 && event.rot.alpha < 300) {
     document.body.style.backgroundColor = "blue";
+  } else if (event.rot.alpha > 170 && event.rot.alpha < 190) {
+    document.body.style.backgroundColor = "yellow";
   } else {
-  document.body.style.backgroundColor = "green";
+    document.body.style.backgroundColor = "green";
   }
 };
 
@@ -63,6 +65,8 @@ function going(event) {
     console.log("going left")  
   } else if (event.rot.alpha > 280 && event.rot.alpha < 300) {
     console.log("going right")
+  } else if (event.rot.alpha > 170 && event.rot.alpha < 190) {
+    console.log("going back")
   } else {
   console.log("going straight")
   }
