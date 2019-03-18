@@ -94,7 +94,33 @@ function going(event) {
   } else if (event.rot.beta > 155 && event.rot.beta < 180) {
     console.log("going purple")
   } else {
-  console.log("going straight")
+  console.log("going turquoise")
+  }
+};*/
+
+//Function for colors GAMMA added by group
+/*function colorTheBackground(event){
+  if (event.rot.gamma < -60 && event.rot.gamma > -90) {
+    document.body.style.backgroundColor = "blue";
+  } else if (event.rot.gamma < -1 && event.rot.gamma > -40) {
+    document.body.style.backgroundColor = "brown";
+  } else if (event.rot.gamma > 60 && event.rot.gamma < 90) {
+    document.body.style.backgroundColor = "orange";
+  } else {
+    document.body.style.backgroundColor = "magenta";
+  }
+};
+
+//Function for console.log:ing rotation added by group
+function going(event) {
+  if (event.rot.gamma < -60 && event.rot.gamma > -90) {
+    console.log("going blue")  
+  } else if (event.rot.gamma < -1 && event.rot.gamma > -40) {
+    console.log("going brown")
+  } else if (event.rot.gamma > 60 && event.rot.gamma < 90) {
+    console.log("going orange")
+  } else {
+  console.log("going magenta")
   }
 };*/
 
