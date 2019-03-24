@@ -2,11 +2,11 @@ var lastMsgEl = null;
 if (document.readyState != 'loading') onDocumentReady();
 else document.addEventListener('DOMContentLoaded', onDocumentReady);
 
-//Vad håller jag ens på med???
+//Group added variable for object
 let animation = document.getElementById('animation');
 
+//Group tweeked function to run animation if condition is met and print the current value either way
 function handleCommand(d) {
-//Group tweeked function to add colors depending on sensor value and print the current value
 if (d.float < 500) {
     lastMsgEl.innerHTML = "Sensor value is: " + d.float;
     animation.className = "noAnimation";
@@ -34,7 +34,7 @@ if (d.float < 500) {
                 handleCommand({
                     text:d[0].substr(1),
                     integer: parseInt(d[1]),
-                    //Harald fixade bugg
+                    //Group fixed bug
                     float: parseFloat(d[2].substr(0,d[2].length-1))
                 });
                 return;          

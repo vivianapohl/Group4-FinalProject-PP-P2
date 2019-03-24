@@ -4,7 +4,6 @@ else document.addEventListener('DOMContentLoaded', onDocumentReady);
 
 function handleCommand(d) {
 //Group tweeked function to add colors depending on sensor value and print the current value
-//lastMsgEl.innerHTML =  `text: ${d.text} <br />int: ${d.integer} <br />float: ${d.float}`;
 if (d.float >= 200 && d.float < 300) {
     document.body.style.backgroundColor = "#022c7d"; //Blue
     lastMsgEl.innerHTML = "Sensor value is: " + d.float;
@@ -54,7 +53,7 @@ function onDocumentReady() {
                 handleCommand({
                     text:d[0].substr(1),
                     integer: parseInt(d[1]),
-                    //Harald fixade bugg
+                    //Group fixed bug
                     float: parseFloat(d[2].substr(0,d[2].length-1))
                 });
                 return;          
