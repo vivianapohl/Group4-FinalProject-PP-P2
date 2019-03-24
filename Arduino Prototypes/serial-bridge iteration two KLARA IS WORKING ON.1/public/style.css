@@ -1,0 +1,70 @@
+
+
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100%; 
+}
+
+ h1 {
+  padding-top: 25px;
+  margin-top: 0;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.animation {
+  width: 100%;
+  height: 100%;
+  animation: pulse 1s infinite;
+  display: block;
+  text-align: center;
+  font-family: monospace;
+  color: white;
+}
+
+.noAnimation {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  font-family: monospace;
+  color: black;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #1a1334;
+  }
+  10% {
+    background-color: #26294a;
+  }
+  20% {
+    background-color: #01545a;
+  }
+  30% {
+    background-color: #017351;
+  }
+  40% {
+    background-color: #03c383;
+  }
+  50% {
+    background-color: #fbbf45;
+  }
+  60% {
+    background-color: #ef6a32;
+  }
+  70% {
+    background-color: #ed0345;
+  }
+  80% {
+    background-color: #a12a5e;
+  }
+  90% {
+    background-color: #710162;
+  }
+  100% {
+    background-color: #022c7d;
+  }
+}
