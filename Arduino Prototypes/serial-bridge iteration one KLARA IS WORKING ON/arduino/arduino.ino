@@ -1,4 +1,5 @@
 // Serial I/O based on example http://forum.arduino.cc/index.php?topic=396450
+//Other sources: https://www.instructables.com/id/How-to-use-a-vibration-sensor-shake-switch-Arduino/
 
 
 // Serial communication
@@ -51,8 +52,8 @@ void loop() {
       newData = false;
     }
 
-  // Every so often report a fake position
-  if (millis() - lastFakeReport > 2000) {
+  // Every so often report a fake position: changed from 2000 millis to 500, added analogRead A0
+  if (millis() - lastFakeReport > 500) {
     report(MsgPosition, analogRead(A0));
     lastFakeReport = millis();    
   }

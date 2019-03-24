@@ -5,21 +5,19 @@ html {
   box-sizing: inherit;
 }
 body {
-  background-color: whitesmoke;
+  background-color: #FF0000;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 h1 {
-  color: darkred;
-}
-a, a:link, a:visited {
-  color: darkred;
-}
-a:hover {
-  color: black;
+  color: white;
+  text-align: center;
 }
 
 #lastMsg {
   font-family: monospace;
+  color: white;
+  display: block;
+  text-align: center;
 }
 
 #sentCommands {

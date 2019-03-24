@@ -3,28 +3,34 @@ if (document.readyState != 'loading') onDocumentReady();
 else document.addEventListener('DOMContentLoaded', onDocumentReady);
 
 function handleCommand(d) {
-//Klara added colors and senser values printed out
+//Group tweeked function to add colors depending on sensor value and print the current value
 //lastMsgEl.innerHTML =  `text: ${d.text} <br />int: ${d.integer} <br />float: ${d.float}`;
-if (d.float >= 500 && d.float < 600) {
-    document.body.style.backgroundColor = "#ff3585"; //Pink
+if (d.float >= 200 && d.float < 300) {
+    document.body.style.backgroundColor = "#022c7d"; //Blue
+    lastMsgEl.innerHTML = "Sensor value is: " + d.float;
+} else if (d.float >= 300 && d.float < 400) {
+        document.body.style.backgroundColor = "#01545a"; //Teal
+        lastMsgEl.innerHTML = "Sensor value is: " + d.float;
+} else if (d.float >= 500 && d.float < 600) {
+    document.body.style.backgroundColor = "#017351"; //Green
     lastMsgEl.innerHTML = "Sensor value is: " + d.float;
 } else if (d.float >= 600 && d.float < 700) {
-        document.body.style.backgroundColor = "#4B0082"; //Purple
+        document.body.style.backgroundColor = "#fbbf45"; //Yellow
         lastMsgEl.innerHTML = "Sensor value is: " + d.float;
-    } else if (d.float >= 700 && d.float < 800) {
-        document.body.style.backgroundColor = "#0000FF"; //Blue
+} else if (d.float >= 700 && d.float < 800) {
+        document.body.style.backgroundColor = "ef6a32"; //Orange
         lastMsgEl.innerHTML = "Sensor value is: " + d.float;
-    } else if (d.float >= 800 && d.float < 900) {
-        document.body.style.backgroundColor = "#00FF00"; //Green
+} else if (d.float >= 800 && d.float < 900) {
+        document.body.style.backgroundColor = "#ed0345"; //Red
         lastMsgEl.innerHTML = "Sensor value is: " + d.float;
-    } else if (d.float >= 900 && d.float < 1000) {
-        document.body.style.backgroundColor = "#FFFF00"; //Yellow
+} else if (d.float >= 900 && d.float < 1000) {
+        document.body.style.backgroundColor = "#a12a5e"; //Pink-ish
         lastMsgEl.innerHTML = "Sensor value is: " + d.float;
-    } else if (d.float >= 1000 && d.float < 1500) {
-        document.body.style.backgroundColor = "#FF7F00"; //Orange
+} else if (d.float >= 1000 && d.float < 1500) {
+        document.body.style.backgroundColor = "#710162"; //Purple
         lastMsgEl.innerHTML = "Sensor value is: " + d.float;
- } else {
-    document.body.style.backgroundColor = "#FF0000"; //Red
+} else {
+    document.body.style.backgroundColor = "#26294a"; //Dark Blue
     lastMsgEl.innerHTML = "Sensor value is: " + d.float;
  }
 }
