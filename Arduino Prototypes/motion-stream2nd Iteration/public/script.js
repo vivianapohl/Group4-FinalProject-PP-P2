@@ -115,11 +115,13 @@ function colorTheBackground(event){
 
 //Function for console.log:ing rotation added by group
 function going(event) {
-  if (event.rot.gamma < -60 && event.rot.gamma > -90) {
-    console.log("going blue")  
-  } else if (event.rot.gamma < -1 && event.rot.gamma > -40) {
-    console.log("going brown")
-  } else if (event.rot.gamma > 60 && event.rot.gamma < 90) {
+  if (event.rot.gamma < -30 && event.rot.gamma > -40) {
+    console.log("going cyan")  
+  } else if (event.rot.gamma < -40 && event.rot.gamma > -89) {
+    console.log("going navy")
+  } else if (event.rot.gamma > 30 && event.rot.gamma < 40) {
+    console.log("going yellow")
+  } else if (event.rot.gamma > 40 && event.rot.gamma < 89) {
     console.log("going orange")
   } else {
   console.log("going magenta")
