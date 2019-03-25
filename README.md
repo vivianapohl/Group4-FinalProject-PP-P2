@@ -15,8 +15,8 @@ https://github.com/ClintH/interactivity
 
 **Why the project is useful**
 
-The project is exploring connectivity in relation to physical prototyping between an Arduino Kit, a computer and in some cases a phone.
-The used ubicomp systems where designed based on a Serial Bridge and a Motion-Stream connection based on Clint Heyers Tutorials.
+The project is exploring bidirectional communication in relation to physical prototyping between an Arduino Kit, a computer and in some cases a phone.
+The used ubicomp systems were designed based on a Serial Bridge and a Motion-Stream connection based on Clint Heyers Tutorials.
 The code placed within this repository is useful for creating lo-fi interactivity prototypes with ubiquitous computing systems.
 
 
@@ -32,19 +32,17 @@ The project explores an intuitive way of interacting with bike lights and how to
 As this repository is based upon two different connectivity approaches one need to distinguish between the Serial-Bridge based code and the Motion-Stream code.
 
 Before getting started please download and install the following onto your computer:
--
+-npm
+-node.js
+
   
 To get started with the Serial Bridge
-```sh
-<script src="../../build/annyang.min.js"></script>
-<script src="main.js"></script>
-```
-The **annyang.min.js** can be placed in a separate folder if you are playing around with several examples.
 
 
 
 
-To get started, link your **annyang.min.js** file in your index.html along with your **main.js**:
+
+To get started with the Motion-Stream:
 
 
 **Who maintains and contributes**
