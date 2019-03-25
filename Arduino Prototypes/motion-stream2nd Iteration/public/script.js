@@ -100,11 +100,13 @@ function going(event) {
 
 //Function for colors GAMMA added by group
 function colorTheBackground(event){
-  if (event.rot.gamma < -10 && event.rot.gamma > -20) {
-    document.body.style.backgroundColor = "blue";
-  } else if (event.rot.gamma < -20 && event.rot.gamma > -30) {
-    document.body.style.backgroundColor = "brown";
-  } else if (event.rot.gamma > 10 && event.rot.gamma < 30) {
+  if (event.rot.gamma < -30 && event.rot.gamma > -40) {
+    document.body.style.backgroundColor = "cyan";
+  } else if (event.rot.gamma < -40 && event.rot.gamma > -89) {
+    document.body.style.backgroundColor = "navy";
+  } else if (event.rot.gamma > 30 && event.rot.gamma < 40) {
+    document.body.style.backgroundColor = "yellow";
+  } else if (event.rot.gamma > 40 && event.rot.gamma < 89) {
     document.body.style.backgroundColor = "orange";
   } else {
     document.body.style.backgroundColor = "magenta";
