@@ -103,7 +103,7 @@ function colorTheBackground(event){
   if (event.rot.gamma < -30 && event.rot.gamma > -40) {
     document.body.style.backgroundColor = "cyan";
   } else if (event.rot.gamma < -40 && event.rot.gamma > -89) {
-    document.body.style.backgroundColor = "navy";
+    document.body.style.backgroundColor = "LightSeaGreen";
   } else if (event.rot.gamma > 30 && event.rot.gamma < 40) {
     document.body.style.backgroundColor = "yellow";
   } else if (event.rot.gamma > 40 && event.rot.gamma < 89) {
@@ -118,7 +118,7 @@ function going(event) {
   if (event.rot.gamma < -30 && event.rot.gamma > -40) {
     console.log("going cyan")  
   } else if (event.rot.gamma < -40 && event.rot.gamma > -89) {
-    console.log("going navy")
+    console.log("going blue")
   } else if (event.rot.gamma > 30 && event.rot.gamma < 40) {
     console.log("going yellow")
   } else if (event.rot.gamma > 40 && event.rot.gamma < 89) {
@@ -129,17 +129,17 @@ function going(event) {
 };
 
 function showData(m) {
-  let html = 'accel';
+  let html = 'Acceleration (accel)';
   html += '<table><tr><td>' + m.accel.x.toFixed(3) + '</td><td>' + m.accel.y.toFixed(3) + '</td><td>' + m.accel.z.toFixed(3) + '</tr></table>';
   html += '</table>';
   
-  html += 'rot';
+  html += 'Rotation (rot)';
   html += '<table><tr><td>' + m.rot.alpha.toFixed(3) + '</td><td>' + m.rot.beta.toFixed(3) + '</td><td>' + m.rot.gamma.toFixed(3) + '</tr></table>';
   
-  html += 'rotMotion';
+  html += 'Rotation Motion (rotMotion)';
   html += '<table><tr><td>' + m.rotMotion.alpha.toFixed(3) + '</td><td>' + m.rotMotion.beta.toFixed(3) + '</td><td>' + m.rotMotion.gamma.toFixed(3) + '</tr></table>';
   
-  html += 'accelGrav';
+  html += 'Acceleration Gravity (accelGrav)';
   html += '<table><tr><td>' + m.accelGrav.x.toFixed(3) + '</td><td>' + m.accelGrav.y.toFixed(3) + '</td><td>' + m.accelGrav.z.toFixed(3) + '</tr></table>';
   html += '</table>';
   document.getElementById('last').innerHTML = html;

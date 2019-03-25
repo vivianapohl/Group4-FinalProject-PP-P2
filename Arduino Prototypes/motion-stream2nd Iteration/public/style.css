@@ -6,7 +6,9 @@ html {
 }
 body {
   background-color: whitesmoke;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: darkred;
+  font-size: 16.5px;
 }
 h1 {
   color: darkred;
@@ -15,11 +17,11 @@ a, a:link, a:visited {
   color: darkred;
 }
 a:hover {
-  color: black;
+  color: darkred;
 }
 
 #last>table {
-  border: 1px solid gray;
+  border: 1px solid black;
 }
 #last td {
   width: 5rem;
