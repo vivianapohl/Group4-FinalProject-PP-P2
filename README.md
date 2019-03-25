@@ -32,8 +32,9 @@ The project explores an intuitive way of interacting with bike lights and how to
 As this repository is based upon two different connectivity approaches one need to distinguish between the Serial-Bridge based code and the Motion-Stream code.
 
 Before getting started please download and install the following onto your computer:
--npm
--node.js
+
+- npm
+- node.js
 
   
 To get started with the Serial Bridge
