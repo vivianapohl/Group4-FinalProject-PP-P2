@@ -1,0 +1,25 @@
+body {
+  padding-top: 17px;
+  background-color: #26294a;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+h1 {
+  margin-top: 0;
+  color: white;
+  text-align: center;
+}
+
+#lastMsg {
+  font-family: monospace;
+  color: white;
+  display: block;
+  text-align: center;
+}
+
+#sentCommands {
+  overflow: scroll;
+  height: 10rem;
+  width: 10rem;
+  border: 1px solid black;
+  background: white;
+}
