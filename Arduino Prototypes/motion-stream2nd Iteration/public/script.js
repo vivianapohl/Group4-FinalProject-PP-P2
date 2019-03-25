@@ -59,7 +59,7 @@ function initWebsocket() {
   }
 };
 
-//Function for console.log:ing rotation added by group
+//Function for console logging ALPHA rotation added by group
 function going(event) {
   if (event.rot.alpha > 60 && event.rot.alpha < 80) {
     console.log("going left")  
@@ -85,7 +85,7 @@ function going(event) {
   }
 };
 
-//Function for console.log:ing rotation added by group
+//Function for console logging BETA rotation added by group
 function going(event) {
   if (event.rot.beta > 40 && event.rot.beta < 100) {
     console.log("going pink")  
@@ -113,7 +113,7 @@ function colorTheBackground(event){
   }
 };
 
-//Function for console.log:ing rotation added by group
+//Function for console logging rotation added by group
 function going(event) {
   if (event.rot.gamma < -30 && event.rot.gamma > -40) {
     console.log("going cyan")  
@@ -129,18 +129,19 @@ function going(event) {
 };
 
 function showData(m) {
-  let html = 'Acceleration (accel)';
+  let html = 'Acceleration';
   html += '<table><tr><td>' + m.accel.x.toFixed(3) + '</td><td>' + m.accel.y.toFixed(3) + '</td><td>' + m.accel.z.toFixed(3) + '</tr></table>';
   html += '</table>';
-  
-  html += 'Rotation (rot)';
+  //(accel)
+  html += 'Rotation';
   html += '<table><tr><td>' + m.rot.alpha.toFixed(3) + '</td><td>' + m.rot.beta.toFixed(3) + '</td><td>' + m.rot.gamma.toFixed(3) + '</tr></table>';
-  
-  html += 'Rotation Motion (rotMotion)';
+  //(rot)
+  html += 'Rotation Motion';
   html += '<table><tr><td>' + m.rotMotion.alpha.toFixed(3) + '</td><td>' + m.rotMotion.beta.toFixed(3) + '</td><td>' + m.rotMotion.gamma.toFixed(3) + '</tr></table>';
-  
-  html += 'Acceleration Gravity (accelGrav)';
+  //(rotMotion)
+  html += 'Acceleration Gravity';
   html += '<table><tr><td>' + m.accelGrav.x.toFixed(3) + '</td><td>' + m.accelGrav.y.toFixed(3) + '</td><td>' + m.accelGrav.z.toFixed(3) + '</tr></table>';
   html += '</table>';
+  //(accelGrav)
   document.getElementById('last').innerHTML = html;
 }
