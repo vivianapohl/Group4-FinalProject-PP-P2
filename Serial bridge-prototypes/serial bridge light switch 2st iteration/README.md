@@ -1,9 +1,11 @@
 **What the sketch does**
+
 This sketch is exploring sending commands from a a localhost over a serialport to an Arduino to turn on/off an LED light
 As a 2nd iteration the group implemented a GUI so when the buttons are pressed the information will be send to the Arduino and the LED will turn on/off
 
 
 **How users can get started with the project:**
+
 (from clints ReadMe)
 1. Run `npm install`
 2. Upload _Arduino\Arduino.ino_ to your Arduino
@@ -22,10 +24,12 @@ The demo consists of three bits: an Arduino sketch, a Node.js app, and a web app
 
 
 **Serial commands**
+
 Press the buttons to turn on/off LED
 
 
 **The presented code is based on and Read more:**
+
 https://github.com/ClintH/interactivity
 
 More on:
