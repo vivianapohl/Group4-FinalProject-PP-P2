@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+html, body {
+  height: 100%;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+#last>table {
+  border: 1px solid black;
+  padding: 5px;
+  
+}
+#last td {
+  width: 5rem;
+}
+#last.frozen {
+  background-color: black;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 100%;
+  display: block;
+  text-align: center;
+}
+
+.row {
+height: 100%;
+ 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
