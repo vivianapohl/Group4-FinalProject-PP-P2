@@ -15,7 +15,7 @@ This sketch is exploring sending commands from a a localhost over a serialport t
 6. In your browser, open up `http://localhost:4000`. This will allow you to send commands to the Node.js server, which in turn forwards it to the Arduino. Likewise, messages sent by the Arduino are displayed in the web page.
 
 
-# Architecture
+**Architecture**
 
 The demo consists of three bits: an Arduino sketch, a Node.js app, and a web app.
 
@@ -23,7 +23,7 @@ The demo consists of three bits: an Arduino sketch, a Node.js app, and a web app
 - A Node.js app connects to the computer's serial port. It's a webserver with websockets enabled. When serial data is received from the Arduino, it broadcasts it to all clients connected via websockets. When data is received on the websocket, it sends it to the Arduino. You can open the connection to your Node.js server from any number of web browsers, including mobile devices!
 
 
-# Serial commands
+**Serial commands**
 1 for LED turn On
 2 for LED turn Off
 
