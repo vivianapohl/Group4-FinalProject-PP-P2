@@ -24,7 +24,9 @@ It will continue running. To stop it again, press CTRL+C (PC) or CMD+C (Mac).
 
 * [reconnecting-websocket](https://github.com/pladaria/reconnecting-websocket) wrapper (v3.2.2)
 
-# Read more
+# Read more 
+(extracted from Clints ReadMe)
 
+* It's [also available on Glitch](https://glitch.com/edit/#!/remix/ch-motion-data)
 * [Device Orientation & Motion](https://developers.google.com/web/fundamentals/native-hardware/device-orientation/) (Google)
 * [Device Orientation](https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation) (MDN)
