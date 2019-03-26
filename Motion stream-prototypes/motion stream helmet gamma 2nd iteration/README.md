@@ -3,11 +3,11 @@
 This example of the  motion stream shows how orientation data is send from a mobile device via websockets to a server. 
 From there, the server distributes the received data to all connected clients.
 The mobile device was implemented into a helmet. 
-The second iteration the screen from the localhost is divided into three parts to indicate more clearly the different ways the bike is moving. This is an example of how a bike lamp could work that indicates which way the bike is going
+The second iterations: the screen from the localhost is divided into three parts to indicate more clearly the different ways the bike is moving. This is an example of how a bike lamp could work that indicates which way the bike is going
 
 **How users can get started with the project:**
 
-(from clints ReadMe)
+(from Clint's ReadMe)
 
 1. In the directory you've got this sample:
 
@@ -21,7 +21,7 @@ The second iteration the screen from the localhost is divided into three parts t
 
 It will continue running. To stop it again, press CTRL+C (PC) or CMD+C (Mac).
 
-4. Open the browser and type your ip-address + :8080
+4. Open the browser and type your ip-address + :8080. It will be blank until the mobile is connected.
    Eg. http://12.2.30.16:8080/
 
 5. Open the browser in your mobile device and type your ip-address + :8080/mobile.html
