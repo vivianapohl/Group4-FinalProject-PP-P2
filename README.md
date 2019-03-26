@@ -39,9 +39,10 @@ Before getting started please download and install the following onto your compu
 As this repository consists of several code example please go and see the individual ReadMe files to start the different sketches.
 
 **Main structure of this repository**
-- In 'Clint Example' the origin Tutorial code has been placed as a backup so the original code is available
-- In 'Arduino Example' 
-- Seri
+
+- In 'Arduino Example' are sketches we used for Arduino 
+- In 'Serial Bridge' file the actual assessment code can be found
+- In 'Motion Stream' file the actual assessment code can be found
 
 
 **Who maintains and contributes**
