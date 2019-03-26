@@ -80,14 +80,14 @@ function printDuration() {
 
 /*This clears the time variable when pressure is released and value drops, stopping the timer.
 After the pressure is released the function will check if the time it (FSR sensor) was pressed
-is over or under 20 seconds. If over 20 seconds the background turns green, if under it turns red -> indicating 
+is over or under 10 seconds. If over 10 seconds the background turns green, if under it turns red -> indicating 
 more sitting / exercise is needed. The start variable is also cleared, allowing the functions to start over 
 when applying pressure again */
 function stop() {
   clearInterval(start);
   start = null;
   document.getElementById('sendForm').innerHTML = '0';
-  if (time > 20) {
+  if (time > 10) {
     document.body.style.backgroundColor = 'green';
   }
   else {
