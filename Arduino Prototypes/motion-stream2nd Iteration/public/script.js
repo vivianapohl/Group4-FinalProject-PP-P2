@@ -1,17 +1,15 @@
 var socket = null;
 var frozen = false;
 
-if (document.readyState != 'loading') ready();
-else document.addEventListener('DOMContentLoaded', ready);
+if (document.readyState != "loading") ready();
+else document.addEventListener("DOMContentLoaded", ready);
 
 function ready() {
-  
-  document.getElementById('last').addEventListener('click', e=> {
+  document.getElementById("last").addEventListener("click", e => {
     frozen = !frozen;
-    document.getElementById('last').classList.toggle('frozen');
+    document.getElementById("last").classList.toggle("frozen");
   });
-  
-    
+
   initWebsocket();
 }
 
@@ -19,23 +17,21 @@ function onData(e) {
   var accel = e.accel;
   var accelGrav = e.accelGrav;
   var rot = e.rot;
-  
- // console.log("hello its Clint's code");
+
+  // console.log("hello its Clint's code");
   if (!frozen) {
     showData(e);
     colorTheBackground(e);
-    going(e);
   }
 }
 
-
 function initWebsocket() {
-  const url = 'ws://' + location.host + '/ws';
+  const url = "ws://" + location.host + "/ws";
   socket = new ReconnectingWebsocket(url);
 
   // Connection has been established
   socket.onopen = function(evt) {
-    console.log('Web socket opened: ' + url);
+    console.log("Web socket opened: " + url);
   };
 
   // Received a message
@@ -47,101 +43,68 @@ function initWebsocket() {
 }
 
 //Function for colors ALPHA added by group
-/*function colorTheBackground(event){
-  if (event.rot.alpha > 60 && event.rot.alpha < 80) {
-    document.body.style.backgroundColor = "red";
-  } else if (event.rot.alpha > 280 && event.rot.alpha < 300) {
-    document.body.style.backgroundColor = "blue";
-  } else if (event.rot.alpha > 170 && event.rot.alpha < 190) {
-    document.body.style.backgroundColor = "yellow";
-  } else {
-    document.body.style.backgroundColor = "green";
+function colorTheBackground(event) {
+  //Group added statement to "reset" the column when the value is changed
+  document.getElementById("column1").style.backgroundColor = "white";
+  document.getElementById("column2").style.backgroundColor = "white";
+  document.getElementById("column3").style.backgroundColor = "white";
+  document.getElementById("column1").innerHTML = "";
+  document.getElementById("string2").innerHTML = "<h1>motion-stream</h1>";
+  document.getElementById("column3").innerHTML = "";
+  //Group added conditional to change colors according to value, also prints direction
+  if (event.rot.alpha > 60 && event.rot.alpha < 120) {
+    document.getElementById("column1").style.backgroundColor = "cyan";
+    document.getElementById("column1").innerHTML = "<h1>going left</h1>";
+  } else if (event.rot.alpha < 30 || event.rot.alpha > 330) {
+    document.getElementById("column2").style.backgroundColor = "magenta";
+    document.getElementById("string2").innerHTML = "<h1>going middle</h1>";
+  } else if (event.rot.alpha > 240 && event.rot.alpha < 300) {
+    document.getElementById("column3").style.backgroundColor = "yellow";
+    document.getElementById("column3").innerHTML = "<h1>going right</h1>";
   }
-};
-
-//Function for console logging ALPHA rotation added by group
-function going(event) {
-  if (event.rot.alpha > 60 && event.rot.alpha < 80) {
-    console.log("going left")  
-  } else if (event.rot.alpha > 280 && event.rot.alpha < 300) {
-    console.log("going right")
-  } else if (event.rot.alpha > 170 && event.rot.alpha < 190) {
-    console.log("going back")
-  } else {
-  console.log("going straight")
-  }
-};*/
-
-//Function for colors BETA added by group
-/*function colorTheBackground(event){
-  if (event.rot.beta > 40 && event.rot.beta < 100) {
-    document.body.style.backgroundColor = "pink";
-  } else if (event.rot.beta < -155 && event.rot.beta > -180) {
-    document.body.style.backgroundColor = "limegreen";
-  } else if (event.rot.beta > 155 && event.rot.beta < 180) {
-    document.body.style.backgroundColor = "purple";
-  } else {
-    document.body.style.backgroundColor = "turquoise";
-  }
-};
-
-//Function for console logging BETA rotation added by group
-function going(event) {
-  if (event.rot.beta > 40 && event.rot.beta < 100) {
-    console.log("going pink")  
-  } else if (event.rot.beta < -155 && event.rot.beta > -180) {
-    console.log("going green")
-  } else if (event.rot.beta > 155 && event.rot.beta < 180) {
-    console.log("going purple")
-  } else {
-  console.log("going turquoise")
-  }
-};*/
-
-//Function for colors GAMMA added by group
-function colorTheBackground(event){
-  if (event.rot.gamma < -30 && event.rot.gamma > -40) {
-    document.body.style.backgroundColor = "cyan";
-  } else if (event.rot.gamma < -40 && event.rot.gamma > -89) {
-    document.body.style.backgroundColor = "LightSeaGreen";
-  } else if (event.rot.gamma > 30 && event.rot.gamma < 40) {
-    document.body.style.backgroundColor = "yellow";
-  } else if (event.rot.gamma > 40 && event.rot.gamma < 89) {
-    document.body.style.backgroundColor = "orange";
-  } else {
-    document.body.style.backgroundColor = "magenta";
-  }
-};
-
-//Function for console logging rotation added by group
-function going(event) {
-  if (event.rot.gamma < -30 && event.rot.gamma > -40) {
-    console.log("going cyan")  
-  } else if (event.rot.gamma < -40 && event.rot.gamma > -89) {
-    console.log("going blue")
-  } else if (event.rot.gamma > 30 && event.rot.gamma < 40) {
-    console.log("going yellow")
-  } else if (event.rot.gamma > 40 && event.rot.gamma < 89) {
-    console.log("going orange")
-  } else {
-  console.log("going magenta")
-  }
-};
+}
 
 function showData(m) {
-  let html = 'Acceleration';
-  html += '<table><tr><td>' + m.accel.x.toFixed(3) + '</td><td>' + m.accel.y.toFixed(3) + '</td><td>' + m.accel.z.toFixed(3) + '</tr></table>';
-  html += '</table>';
-  //(accel)
-  html += 'Rotation';
-  html += '<table><tr><td>' + m.rot.alpha.toFixed(3) + '</td><td>' + m.rot.beta.toFixed(3) + '</td><td>' + m.rot.gamma.toFixed(3) + '</tr></table>';
-  //(rot)
-  html += 'Rotation Motion';
-  html += '<table><tr><td>' + m.rotMotion.alpha.toFixed(3) + '</td><td>' + m.rotMotion.beta.toFixed(3) + '</td><td>' + m.rotMotion.gamma.toFixed(3) + '</tr></table>';
-  //(rotMotion)
-  html += 'Acceleration Gravity';
-  html += '<table><tr><td>' + m.accelGrav.x.toFixed(3) + '</td><td>' + m.accelGrav.y.toFixed(3) + '</td><td>' + m.accelGrav.z.toFixed(3) + '</tr></table>';
-  html += '</table>';
-  //(accelGrav)
-  document.getElementById('last').innerHTML = html;
+  let html = "accel";
+  html +=
+    '<table align="center"><tr><td>' +
+    m.accel.x.toFixed(3) +
+    "</td><td>" +
+    m.accel.y.toFixed(3) +
+    "</td><td>" +
+    m.accel.z.toFixed(3) +
+    "</tr></table>";
+  html += "</table>";
+
+  html += "rot";
+  html +=
+    '<table align="center"><tr><td>' +
+    m.rot.alpha.toFixed(3) +
+    "</td><td>" +
+    m.rot.beta.toFixed(3) +
+    "</td><td>" +
+    m.rot.gamma.toFixed(3) +
+    "</tr></table>";
+
+  html += "rotMotion";
+  html +=
+    '<table align="center"><tr><td>' +
+    m.rotMotion.alpha.toFixed(3) +
+    "</td><td>" +
+    m.rotMotion.beta.toFixed(3) +
+    "</td><td>" +
+    m.rotMotion.gamma.toFixed(3) +
+    "</tr></table>";
+
+  html += "accelGrav";
+  html +=
+    '<table align="center"><tr><td>' +
+    m.accelGrav.x.toFixed(3) +
+    "</td><td>" +
+    m.accelGrav.y.toFixed(3) +
+    "</td><td>" +
+    m.accelGrav.z.toFixed(3) +
+    "</tr></table>";
+  html += "</table>";
+  document.getElementById("last").innerHTML = html;
 }
