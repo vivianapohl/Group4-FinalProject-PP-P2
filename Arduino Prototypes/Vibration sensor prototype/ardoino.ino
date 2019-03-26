@@ -1,5 +1,5 @@
-Sources: https://create.arduino.cc/projecthub/karmette/basic-led-setup-for-beginners-0a124a
-        https://www.instructables.com/id/How-to-use-a-vibration-sensor-shake-switch-Arduino/
+/*Sources: https://create.arduino.cc/projecthub/karmette/basic-led-setup-for-beginners-0a124a
+           https://www.instructables.com/id/How-to-use-a-vibration-sensor-shake-switch-Arduino/ */
 
 int LED = 13; //Buzzer connected to pin 8 of Arduino uno / mega
 int sensor;           //Variable to store analog value (0-1023)
