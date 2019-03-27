@@ -4,7 +4,7 @@ This sketch is exploring sending commands from a a localhost over a serialport t
 
 How users can get started with the project:
 
-1. Run npm install in the terminal.
+1. Run npm install in the terminal to install all necessary to run the code.
 2. Upload code from arduino/LightSwitch.ino to your Arduino board.
 3. You can check wether the code is working by righting a or b to Arduinos serial monitor.
 4. Write npm start to boot up your server. The port name is: your ip address :8080.
