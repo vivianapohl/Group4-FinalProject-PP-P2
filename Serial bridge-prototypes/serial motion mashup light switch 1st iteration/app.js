@@ -1,3 +1,8 @@
+/* Since the code for the motion-stream server.js and serial-bridge app.js are almost identical and only difference
+ is in the server they use and serial-bridge has some code for handling port activity. I took serial bridge as a base,
+ because it has more node modules to cover port code part and added the the missing code for running the the server on
+ port 8080. */ 
+
 // to connect write node app in terminal and connect it to the arduino, open the via websocket on your phone :8080.
 var express = require('express');
 var path = require('path');

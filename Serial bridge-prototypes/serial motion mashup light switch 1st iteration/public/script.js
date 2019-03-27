@@ -47,9 +47,10 @@ function onDocumentReady() {
     })
 }
 
+//Two functions for sending string to arduino.
 function buttonthing() {
     document.getElementById('sendtoSerial').value = 'a';
-  }
+}
 function buttonthing2() {
     document.getElementById('sendtoSerial').value = 'b';
-  }
+}
