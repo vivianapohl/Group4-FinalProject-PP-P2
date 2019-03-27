@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: whitesmoke;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: darkred;
+  font-size: 16.5px;
+}
+h1 {
+  letter-spacing: 10px;
+  color: whitesmoke;
+}
+a, a:link, a:visited {
+  color: darkred;
+}
+a:hover {
+  color: darkred;
+}
+
+#last>table {
+  border: 1px solid black;
+}
+#last td {
+  width: 5rem;
+}
+#last.frozen {
+  background-color: lightblue;
+}
