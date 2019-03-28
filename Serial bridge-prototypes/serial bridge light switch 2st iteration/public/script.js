@@ -46,7 +46,7 @@ function onDocumentReady() {
         socket.send(send);  
     })
 }
-
+//functions to call with the buttons made by the group
 function buttonthing() {
     document.getElementById('sendtoSerial').value = 'a';
   }
