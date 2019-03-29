@@ -1,9 +1,10 @@
-**What the sketch does**
+**What the project does**
 
 This example of the  motion stream shows how orientation data is send from a mobile device via websockets to a server. 
 From there, the server distributes the received data to all connected clients.
 The mobile device was implemented into a helmet. 
 The second iterations: the screen from the localhost is divided into three parts to indicate more clearly the different ways the bike is moving. This is an example of how a bike lamp could work that indicates which way the bike is going.
+This example emphasizes the alpha movement/degrees of the gyro.
 
 **How users can get started with the project:**
 
