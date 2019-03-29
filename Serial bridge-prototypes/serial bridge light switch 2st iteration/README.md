@@ -45,5 +45,13 @@ Credits:
 
 - Arduino serial I/O: http://forum.arduino.cc/index.php?topic=396450
 
+**Who maintains and contributes**
+
+  - Farbod Hashemian
+  - Klara Törnquist
+  - Malin Benson
+  - Mihhail Korot
+  - Viviana Pohl
+
 
 

@@ -1,6 +1,3 @@
-
-
-
 **What the sketch does**
 This sketch is exploring sending commands from a a localhost over a serialport to an Arduino to turn on/off an LED light
 
@@ -43,5 +40,12 @@ Credits:
 
 - Arduino serial I/O: http://forum.arduino.cc/index.php?topic=396450
 
+**Who maintains and contributes**
+
+  - Farbod Hashemian
+  - Klara Törnquist
+  - Malin Benson
+  - Mihhail Korot
+  - Viviana Pohl
 
 

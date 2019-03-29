@@ -25,3 +25,11 @@ https://github.com/ClintH/interactivity
 It's also available on Glitch
 Device Orientation & Motion (Google)
 Device Orientation (MDN)
+
+**Who maintains and contributes**
+
+  - Farbod Hashemian
+  - Klara Törnquist
+  - Malin Benson
+  - Mihhail Korot
+  - Viviana Pohl

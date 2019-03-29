@@ -38,7 +38,13 @@ https://github.com/ClintH/interactivity
 * [Device Orientation & Motion](https://developers.google.com/web/fundamentals/native-hardware/device-orientation/) (Google)
 * [Device Orientation](https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation) (MDN)
 
+**Who maintains and contributes**
 
+  - Farbod Hashemian
+  - Klara Törnquist
+  - Malin Benson
+  - Mihhail Korot
+  - Viviana Pohl
 
 
 
